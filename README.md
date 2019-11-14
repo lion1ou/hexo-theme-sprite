@@ -1,26 +1,19 @@
 # hexo-theme-xoxo
 
-Hexo theme inspired by [microb](https://github.com/microacup/hexo-theme-micorb) 
+Hexo theme inspired by [xoxo](https://github.com/KevinOfNeu/hexo-theme-xoxo) 
 
-[Demo](https://blog.0xff000000.com)
+[Demo](http://lion1ou.win)
 
 Snapshots: 
 
-![](http://7xr586.com1.z0.glb.clouddn.com/images/fbehv.png)
-
-![](http://7xr586.com1.z0.glb.clouddn.com/images/kwyq1.png)
-
-![](http://7xr586.com1.z0.glb.clouddn.com/images/og6jh.png)
+![Snipaste_2019-11-15_01-33-23.png](https://i.loli.net/2019/11/15/zRorBnDJvlMNptK.png)
+![Snipaste_2019-11-15_01-32-40.png](https://i.loli.net/2019/11/15/XVSAwukHCfoN81r.png)
 
 ...
 
 ## 特点
 
 - 简约
-- 对移动屏幕友好
-- 名字骚气...
-- 颜色搭配让人更容易集中注意力
-- 编不下去了
 
 
 ## 使用
@@ -28,43 +21,44 @@ Snapshots:
 
 ### _config.yml
 ```yml
-# Custom Config
+# html lang
+language: zh-Hans
+
+# main menu navigation
 menu:
   home: /
   archives: /archives
-  tags: /tags
-  search: /search
-  about: https://0xff000000.com
-  rss: /atom.xml
+  # tags: /tags
+  # categories: /categories
+  # search: /search
+  about: /about
+  # rss: /atom.xml
 
-search:
-  path: search.xml
-  field: post
+# stylesheets loaded in the <head>
+stylesheets:
+- //cdn.bootcss.com/pure/1.0.0/pure-min.css
+- /css/xoxo.css
 
-#RSS feed https://github.com/hexojs/hexo-generator-feed
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content_limit: 140
+scripts:
+# - /js/xoxo.js
 
+# switch
+show_excerpt: true # 显示摘要
+show_date: true # 显示时间
 
-sitemap:
-    path: sitemap.xml
+#share
 
-disqus_shortname: XXX
-
-google_analytics: XXX
-baidu_analytics: FuckUBaidu
+# aliQRcode: https://i.loli.net/2019/11/15/FpoMI3UCqyKxnb8.jpg
+# wxQRcode: https://i.loli.net/2019/11/15/FpoMI3UCqyKxnb8.jpg
+shareMsg: 觉得写的不错，请我喝杯奶茶呗~
 
 #footer
-index_page: https://blog.0xff000000.com
-main_site: https://0xff000000.com
-github: https://github.com/KevinOfNeu
-
+index_page: http://lion1ou.win
+# juejin: http://lion1ou.win
+# zhihu: http://lion1ou.win
+# weibo: http://lion1ou.win
+github: https://github.com/lion1ou
 ```
 
 ## TODO
-- [ ] 模板文件中的中文字符提取, 支持 i18n
-- [ ] 增加分享 widget
+

@@ -7,7 +7,7 @@ menu:
   home: /
   archives: /archives
   # tags: /tags
-  #categories: /categories
+  # categories: /categories
   # search: /search
   about: /about
   # rss: /atom.xml
@@ -26,13 +26,13 @@ show_date: true # 显示时间
 
 #share
 
-# aliQRcode: https://cdn.leoao.com/%2300CAE41538138744058.png?imageView2/1/w/200
-# wxQRcode: https://cdn.leoao.com/%2300CAE41538138744058.png?imageView2/1/w/200
+# aliQRcode: https://i.loli.net/2019/11/15/FpoMI3UCqyKxnb8.jpg
+# wxQRcode: https://i.loli.net/2019/11/15/FpoMI3UCqyKxnb8.jpg
 shareMsg: 觉得写的不错，请我喝杯奶茶呗~
 
 #footer
 index_page: http://lion1ou.win
-# juejin: https://0xff000000.com
-# zhihu: https://0xff000000.com
-# weibo: https://0xff000000.com
+# juejin: http://lion1ou.win
+# zhihu: http://lion1ou.win
+# weibo: http://lion1ou.win
 github: https://github.com/lion1ou
