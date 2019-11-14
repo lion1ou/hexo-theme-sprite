@@ -9,18 +9,18 @@ var LessAutoprefix = require('less-plugin-autoprefix');
 var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
 
 gulp.task('default', ['less'], function() {
-  gulp.watch('./source/css/*.less', ['less']);
+  gulp.watch('./source/less/*.less', ['less']);
 });
 
 gulp.task('less', function() {
-  return gulp.src('./source/css/xoxo.less')
+  return gulp.src('./source/less/xoxo.less')
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix]
      }))
     .on('error', console.error.bind(console))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./source/css'));
+    .pipe(gulp.dest('./source/css/', { overwrite: true }));
 });
 
 gulp.task('scripts', function() {

@@ -6,30 +6,33 @@ language: zh-Hans
 menu:
   home: /
   archives: /archives
-  tags: /tags
+  # tags: /tags
   #categories: /categories
-  search: /search
-  about: https://0xff000000.com
-  rss: /atom.xml
-
-# Miscelaneous
-favicon: /logo.png
+  # search: /search
+  about: /about
+  # rss: /atom.xml
 
 # stylesheets loaded in the <head>
 stylesheets:
-# - /css/normalize.css
 - //cdn.bootcss.com/pure/1.0.0/pure-min.css
 - /css/xoxo.css
 
-# scripts loaded in the end of the body
 scripts:
-#- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
-#- /js/xoxo.js
+# - /js/xoxo.js
 
 # switch
-show_excerpt: true
-show_date: true
+show_excerpt: true # 显示摘要
+show_date: true # 显示时间
+
+#share
+
+# aliQRcode: https://cdn.leoao.com/%2300CAE41538138744058.png?imageView2/1/w/200
+# wxQRcode: https://cdn.leoao.com/%2300CAE41538138744058.png?imageView2/1/w/200
+shareMsg: 觉得写的不错，请我喝杯奶茶呗~
+
 #footer
-index_page: https://blog.0xff000000.com
-main_site: https://0xff000000.com
-github: https://github.com/KevinOfNeu
+index_page: http://lion1ou.win
+# juejin: https://0xff000000.com
+# zhihu: https://0xff000000.com
+# weibo: https://0xff000000.com
+github: https://github.com/lion1ou

@@ -42,6 +42,7 @@ body {
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      text-transform: initial;
       .avatar {
         width: 40px;
         height: 40px;
@@ -56,7 +57,7 @@ body {
         margin-left: 10px;
         display: inline-block;
         vertical-align: middle;
-        font-family: 'Montserrat', sans-serif;
+        font-family: Georgia, Times, sans-serif;
         font-weight: 700;
         font-size: 24px;
         line-height: 40px;
@@ -84,7 +85,7 @@ body {
           content: ' ';
         }
         &:focus {
-          background-color: #fff;
+          background-color: @white;
         }
       }
       .pure-menu-item.actived {
@@ -189,11 +190,11 @@ body {
     height: 28px;
     line-height: 28px;
     &.current {
-      color: #fff;
+      color: @white;
       background: #ccc;
       border-radius: 14px;
       &:hover {
-        color: #fff;
+        color: @white;
       }
     }
     &:hover{
@@ -396,6 +397,11 @@ body {
       color: @light-blue;
     }
   }
+  .post-end-tip{
+    padding-top: 30px;
+    color: #333;
+    font-weight: bold;
+  }
 }
 
 .page {
@@ -452,7 +458,7 @@ body {
 }
 
 .post-nav {
-  background-color: #fff;
+  background-color: @white;
   display: block;
   font-size: 0;
   margin: 15px auto;
@@ -514,7 +520,7 @@ body {
 }
 
 .disqus-comments {
-  background-color: #fff;
+  background-color: @white;
   display: block;
   margin: 0 auto;
   width: @post-width - 50;
@@ -576,7 +582,7 @@ body {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 2px solid @white;
     }
     .title {
       margin: 0;

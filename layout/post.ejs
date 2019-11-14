@@ -22,17 +22,17 @@
     </span>
       <span class="slash">/</span>
       <span class="read">
-      <span id="busuanzi_value_page_pv"></span> 点击
+      阅读 <span id="busuanzi_value_page_pv"></span>
     </span>
-      <span class="slash">/</span>
-      <span class="read">阅读耗时 <%=readingTime(page.content, '分钟') %></span>
     </header>
 
     <div class="post-content">
       <%-page.content%>
     </div>
 
-    <div>全文完。</div>
+    <div class="post-end-tip">
+      <div>全文完。</div>
+    </div>
   </article>
   <div class="toc-container">
     <%- partial('partials/toc') %>
