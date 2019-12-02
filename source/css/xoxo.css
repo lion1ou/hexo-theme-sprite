@@ -85,6 +85,7 @@ em {
 footer {
   width: 60%;
   max-width: 840px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
@@ -169,7 +170,7 @@ footer .bottom-item:hover {
 }
 @media (max-width: 576px) {
   .post-page {
-    padding: 10px 50px;
+    padding: 10px 20px;
   }
 }
 html,
@@ -481,7 +482,7 @@ body {
 }
 @media (max-width: 576px) {
   .post {
-    padding: 10px 50px;
+    padding: 10px 20px;
   }
 }
 .post .post-header {
@@ -528,6 +529,9 @@ body {
 }
 .post .post-meta .post-tags .article-tag-list {
   padding-left: 0rem;
+}
+.post .post-content {
+  text-align: justify;
 }
 .post hr {
   width: 100%;
@@ -691,7 +695,7 @@ body {
 }
 @media (max-width: 576px) {
   .tag-page {
-    padding: 10px 50px;
+    padding: 10px 20px;
   }
 }
 .tag-page .tag-item {
