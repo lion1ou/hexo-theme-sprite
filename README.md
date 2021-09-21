@@ -1,4 +1,4 @@
-# hexo-theme-xoxo
+# hexo-theme-sprite
 
 Hexo theme inspired by [xoxo](https://github.com/KevinOfNeu/hexo-theme-xoxo) 
 

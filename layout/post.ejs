@@ -4,26 +4,45 @@
       <h1 class="title">
         <%=page.title%>
       </h1>
-      <span>
-        <% if (theme.show_date && page.date) { %>
-        <time class="time" datetime="<%=date_xml(page.date)%>">
+
+      <% if (theme.postInfo.showDate && page.date) { %>
+      <time class="time" datetime="<%=date_xml(page.date)%>">
         <%=date(page.date)%>
       </time>
-        <% } %>
-      </span>
-      <span class="slash">/</span>
-      <span class="post-meta">
-      <span class="post-tags">
-        <%- list_tags(page.tags, {
-          show_count: false,
-          class: 'article-tag'
-        }) %>
-      </span>
-    </span>
-      <span class="slash">/</span>
-      <span class="read">
-      阅读 <span id="busuanzi_value_page_pv"></span>
-    </span>
+      <% } %>
+
+      <% if (theme.postInfo.wordCount) { %>
+        <span class="slash">/</span>
+        <span class="read">
+          字数 <span class="post-count"><%= wordcount(page.content) %></span>
+        </span>
+      <% } %>
+
+      <% if (theme.postInfo.min2read) { %>
+        <span class="slash">/</span>
+        <span class="read">
+          <span class="post-count"><%= min2read(page.content) %> min</span> 读完
+        </span>
+      <% } %>
+
+      <% if (theme.postInfo.readCount) { %>
+        <span class="slash">/</span>
+        <span class="read">
+          阅读 <span id="busuanzi_value_page_pv"></span>
+        </span>
+      <% } %>
+      
+      <% if (theme.postInfo.showTags && page.tags) { %>
+        <span class="post-meta">
+          <span class="post-tags">
+            <%- list_tags(page.tags, {
+              show_count: false,
+              class: 'article-tag'
+            }) %>
+          </span>
+        </span>
+      <% } %>
+
     </header>
 
     <div class="post-content">

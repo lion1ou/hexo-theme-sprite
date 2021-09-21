@@ -4,6 +4,7 @@
 <%-partial('partials/head')%>
 
 <body>
+  <!-- 导航栏 -->
   <div class="nav-container">
     <%-partial('partials/nav')%>
   </div>
@@ -12,7 +13,8 @@
     <div class="inner" id="content-inner">
       <%- body %>
     </div>
-
+    
+    <!-- 分页 -->
     <% if (page.total > 1){ %>
       <nav class="page-nav text-center">
           <%- paginator({
@@ -21,10 +23,15 @@
             next_text: '〉'}) %>
       </nav>
     <% } %>
-
   </div>
-  <%-partial('partials/footer')%>
-  <%-partial('partials/scripts')%>
-  <%-partial('partials/analytics') %>
+  
+  <!-- 页脚 -->
+  <div class="footer-container">
+    <%-partial('partials/footer')%>
+  </div>
 </body>
+
+<%-partial('partials/scripts')%>
+<%-partial('partials/analytics') %>
+  
 </html>

@@ -15,7 +15,6 @@ if (is_home()) pageTitle+= config.subtitle;
   <meta name="theme-color" content="#202020"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="referrer" content="no-referrer" />
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
   <% if (page.tags && page.tags.length) { %>
     <meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" />
@@ -30,11 +29,21 @@ if (is_home()) pageTitle+= config.subtitle;
   <% } %>
   
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
   <title><%=pageTitle%></title>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+
+  <!-- pure样式 -->
+  <link rel="stylesheet" href="//unpkg.com/purecss@2.0.6/build/pure-min.css">
+  <!-- 自建样式 -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- 高亮样式 -->
+  <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/<%= theme.hljs_style || 'monokai-sublime'%>.min.css">
+
+  <% if (theme.stylesheets && theme.stylesheets.length) { %>
     <!-- stylesheets list from config.yml -->
     <% theme.stylesheets.forEach(function(url) { %>
       <link rel="stylesheet" href="<%=url%>">
     <% }); %>
   <% } %>
+ 
 </head>
