@@ -6,36 +6,36 @@
       <article class="recent-post-item">
         <a class="title" href="<%=config.root + post.path%>"><h2><%=post.title%></h2></a>
         <div class="post-meta">
-          <% if (theme.postItem.showDate && post.date) { %>
+          <% if (theme.index_post_page.show_date && post.date) { %>
             <time class="time" datetime="<%=post.date.toJSON()%>">
               <%=date(post.date)%>
             </time>
           <% } %>
 
           
-          <% if(theme.postItem.wordCount && theme.postItem.showDate) {%>
+          <% if(theme.index_post_page.word_count && theme.index_post_page.show_date) {%>
             <span class="slash">/</span>
           <% } %>
-          <% if (theme.postItem.wordCount) { %>
+          <% if (theme.index_post_page.word_count) { %>
             <span class="read">
               字数 <span class="post-count"><%= wordcount(post.content) %></span>
             </span>
           <% } %>
          
-          <% if(theme.postItem.min2read && theme.postItem.wordCount) {%>
+          <% if(theme.index_post_page.min2read && theme.index_post_page.word_count) {%>
             <span class="slash">/</span>
           <% } %>
-          <% if (theme.postItem.min2read) { %>
+          <% if (theme.index_post_page.min2read) { %>
             <span class="read">
               <span class="post-count"><%= min2read(post.content) %> min</span> 读完
             </span>
           <% } %>
 
-          <% if(theme.postItem.wordCount && theme.postItem.showTags) {%>
+          <% if(theme.index_post_page.word_count && theme.index_post_page.show_tags) {%>
             <span class="slash">/</span>
           <% } %>
           
-          <% if (theme.postItem.showTags && post.tags) { %>
+          <% if (theme.index_post_page.show_tags && post.tags) { %>
             <%- list_tags(post.tags, {
               show_count: false,
               class: 'index-tag'
@@ -43,7 +43,7 @@
           <% } %>
         </div>
 
-        <% if (theme.postItem.showExcerpt && post.excerpt) { %>
+        <% if (theme.index_post_page.show_excerpt && post.excerpt) { %>
           <div class="post-excerpt">
             <%- post.excerpt %>
           </div>

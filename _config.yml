@@ -25,12 +25,12 @@ hljs_style: 'monokai-sublime' # 'atom-one-dark'
 
 
 # postItem 文章块
-index_page:
+index_post_page:
   article_excerpt: true # 显示摘要 0
   # maxRows: 2 # 摘要最大展示行数
-  showTags: true # 显示tags
-  showDate: true # 显示时间
-  wordCount: true # 设置文章字数统计为 true.
+  show_tags: true # 显示tags
+  show_date: true # 显示时间
+  word_count: true # 设置文章字数统计为 true.
   min2read: true # 阅读时长.
 
 # 文章详情  
