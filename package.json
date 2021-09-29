@@ -4,14 +4,15 @@
   "description": "a hexo theme",
   "scripts": {
     "prepublish": "npm run build",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "gulp build",
+    "dev": "gulp"
   },
   "author": "lion1ou",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^2.5.10"
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "less-plugin-autoprefix": "^2.0.0"
   },
   "dependencies": {}
 }
