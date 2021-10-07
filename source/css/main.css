@@ -99,12 +99,43 @@ footer {
   font-size: 12px;
   position: relative;
   z-index: 1024;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .bottom-item {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0px 10px;
 }
-footer .bottom-item:hover {
+footer .link:hover {
   color: #3E8FFF;
 }
 .clearfix:before,
@@ -191,6 +222,7 @@ body {
   color: #202020;
   line-height: 1.8rem;
   margin: 0;
+  background: #fff;
 }
 .nav-container {
   display: -webkit-box;
@@ -220,7 +252,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-y: scroll;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -663,6 +694,7 @@ body {
 }
 .page {
   max-width: 880px;
+  margin: auto;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -676,35 +708,27 @@ body {
 .page ul {
   padding-left: 0px;
 }
-.page .tag-list .tag-list-item {
-  line-height: 20px;
+.page .tag-list-page {
+  margin-top: 150px;
+}
+.page .tag-list-page .tag-cloud-0,
+.page .tag-list-page .tag-cloud-1,
+.page .tag-list-page .tag-cloud-2,
+.page .tag-list-page .tag-cloud-3,
+.page .tag-list-page .tag-cloud-4,
+.page .tag-list-page .tag-cloud-5,
+.page .tag-list-page .tag-cloud-6,
+.page .tag-list-page .tag-cloud-7,
+.page .tag-list-page .tag-cloud-8,
+.page .tag-list-page .tag-cloud-9,
+.page .tag-list-page .tag-cloud-10,
+.page .tag-list-page .tag-cloud-11,
+.page .tag-list-page .tag-cloud-12,
+.page .tag-list-page .tag-cloud-13,
+.page .tag-list-page .tag-cloud-14,
+.page .tag-list-page .tag-cloud-15 {
   display: inline-block;
-  height: 20px;
-  margin: 3px;
-  padding: 0 10px;
-  color: #555;
-  border-radius: 3px;
-  background: #f6f6f6;
-  min-width: 30px;
-  font-size: 14px;
-  text-align: center;
-  line-height: 30px;
-  height: 30px;
-  color: #3E8FFF;
-}
-.page .tag-list .tag-list-item a {
-  color: #555;
-}
-.page .tag-list .tag-list-item:hover {
-  color: #555;
-  background: #efefef;
-}
-.page .tag-list .tag-list-item .tag-list-link {
-  font-weight: 500;
-  margin-right: 5px;
-}
-.page .tag-list .tag-list-item:hover {
-  color: #3E8FFF;
+  margin: 10px 20px;
 }
 .tag-page {
   background-color: #fff;
@@ -870,6 +894,11 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;
 }
+.archives .archive .post-go .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .archives .archive .title {
   margin: 0;
   font-weight: normal;
@@ -881,6 +910,11 @@ body {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 2px;
+  width: 60px;
+  display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: center;
 }
 .archives .archive a:hover {
   color: #3E8FFF;

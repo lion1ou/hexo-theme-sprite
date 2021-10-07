@@ -6,10 +6,12 @@ menu:
   home: /
   archives: /archives
   tags: /tags
-  categories: /categories
+  # categories: /categories
   search: /search
   about: /about
   # rss: /atom.xml
+
+
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -51,3 +53,9 @@ index_page: http://lion1ou.win
 # zhihu: http://lion1ou.win
 # weibo: http://lion1ou.win
 github: https://github.com/lion1ou
+
+# 网站开始时间
+site_start_time: '2016-07-01 00:00:00'
+
+# 显示全站字数
+site_total_count: true
