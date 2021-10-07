@@ -17,3 +17,8 @@ hexo.extend.helper.register('siteTime', function (siteStartTime) {
   return `${diffDays ? `${diffDays} 天 ` : ''}`;
   // return  `${diffYears ? `${diffYears} 年 ` : ''}${diffYears || diffDays ? `${diffDays} 天 ` : ''}${diffYears || diffDays || diffHours ? `${diffHours} 小时 ` : ''}${diffYears || diffDays || diffHours || diffMinutes ? `${diffMinutes} 分钟 ` : ''}${diffYears || diffDays || diffHours || diffMinutes || diffSeconds ? `${diffSeconds} 秒` : ''}`;
 });
+
+
+hexo.extend.helper.register('currentHref', function () {
+  return window.location.href
+});
