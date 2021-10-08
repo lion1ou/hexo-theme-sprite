@@ -391,6 +391,11 @@ body {
   min-height: 30px;
   color: #999;
 }
+@media screen and (max-width: 576px) {
+  .recent-posts .recent-post-item .post-meta {
+    width: 100%;
+  }
+}
 .recent-posts .recent-post-item .title {
   font-size: 12px;
 }
@@ -444,6 +449,11 @@ body {
 .recent-posts .recent-post-item .more {
   margin-top: -5px;
   font-size: 12px !important;
+}
+@media screen and (max-width: 576px) {
+  .recent-posts .recent-post-item .more {
+    display: none;
+  }
 }
 .recent-posts .recent-post-item .more:hover {
   color: #3E8FFF;
@@ -750,6 +760,11 @@ body {
 }
 .page .tag-list-page {
   margin-top: 150px;
+}
+@media screen and (max-width: 576px) {
+  .page .tag-list-page {
+    margin-top: 60px;
+  }
 }
 .page .tag-list-page .tag-cloud-0,
 .page .tag-list-page .tag-cloud-1,

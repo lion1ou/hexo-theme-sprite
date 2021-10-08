@@ -139,6 +139,9 @@ body {
       position: relative;
       min-height: 30px;
       color: @gray-light;
+      @media screen and (max-width: @sm-width) {
+        width: 100%;
+      }
     }
     .title {
       font-size: 12px;
@@ -177,6 +180,9 @@ body {
     }
     
     .more {
+      @media screen and (max-width: @sm-width) {
+        display: none;
+      }
       margin-top: -5px;
       font-size: 12px !important;
       &:hover {
@@ -449,6 +455,9 @@ body {
     padding-left: 0px;
   }
   .tag-list-page{
+    @media screen and (max-width: @sm-width) {
+      margin-top: 60px;
+    }
     margin-top: 150px;
     .tag-cloud {
       &-0,&-1,&-2,&-3,&-4,&-5,&-6,&-7,&-8,&-9,&-10,&-11,&-12,&-13,&-14,&-15 {
