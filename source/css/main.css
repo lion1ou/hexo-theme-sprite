@@ -361,57 +361,57 @@ body {
     max-width: 880px;
   }
 }
-.recent-posts {
+.index-posts {
   margin: 0 auto;
   max-width: 800px;
 }
 @media (max-width: 576px) {
-  .recent-posts {
+  .index-posts {
     padding: 10px 50px;
   }
 }
-.recent-posts .recent-post-item {
+.index-posts .index-post-item {
   margin: 15px auto;
   padding-top: 10px;
   padding-bottom: 10px;
   border-top: none;
 }
-.recent-posts .recent-post-item .post-excerpt {
+.index-posts .index-post-item .post-excerpt {
   color: #999;
   font-size: 14px;
 }
 @media screen and (max-width: 576px) {
-  .recent-posts .recent-post-item .post-excerpt {
+  .index-posts .index-post-item .post-excerpt {
     display: none;
   }
 }
-.recent-posts .recent-post-item .post-meta {
+.index-posts .index-post-item .post-meta {
   font-size: 12px;
   position: relative;
   min-height: 30px;
   color: #999;
 }
 @media screen and (max-width: 576px) {
-  .recent-posts .recent-post-item .post-meta {
+  .index-posts .index-post-item .post-meta {
     width: 100%;
   }
 }
-.recent-posts .recent-post-item .title {
+.index-posts .index-post-item .title {
   font-size: 12px;
 }
-.recent-posts .recent-post-item .title h2 {
+.index-posts .index-post-item .title h2 {
   font-size: 1.2rem;
   font-weight: normal;
 }
 @media screen and (max-width: 576px) {
-  .recent-posts .recent-post-item .title h2 {
+  .index-posts .index-post-item .title h2 {
     font-size: 1rem;
   }
 }
-.recent-posts .recent-post-item .title:hover {
+.index-posts .index-post-item .title:hover {
   color: #3E8FFF;
 }
-.recent-posts .recent-post-item .title-group {
+.index-posts .index-post-item .title-group {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -423,16 +423,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.recent-posts .recent-post-item .title-group .tags {
+.index-posts .index-post-item .title-group .tags {
   margin-left: 6px;
   font-size: 12px;
 }
 @media screen and (max-width: 576px) {
-  .recent-posts .recent-post-item .title-group .tags {
+  .index-posts .index-post-item .title-group .tags {
     display: none;
   }
 }
-.recent-posts .recent-post-item .post-info {
+.index-posts .index-post-item .post-info {
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -446,23 +446,23 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.recent-posts .recent-post-item .more {
+.index-posts .index-post-item .more {
   margin-top: -5px;
   font-size: 12px !important;
 }
 @media screen and (max-width: 576px) {
-  .recent-posts .recent-post-item .more {
+  .index-posts .index-post-item .more {
     display: none;
   }
 }
-.recent-posts .recent-post-item .more:hover {
+.index-posts .index-post-item .more:hover {
   color: #3E8FFF;
 }
-.recent-posts .recent-post-item .index-tag-list {
+.index-posts .index-post-item .index-tag-list {
   display: inline;
   padding: 0;
 }
-.recent-posts .recent-post-item .index-tag-list .index-tag-list-item {
+.index-posts .index-post-item .index-tag-list .index-tag-list-item {
   margin-right: 5px;
   color: #999;
   padding: 2px 5px;
@@ -471,10 +471,10 @@ body {
   display: inline;
   list-style: none;
 }
-.recent-posts .recent-post-item .index-tag-list .index-tag-list-item:hover {
+.index-posts .index-post-item .index-tag-list .index-tag-list-item:hover {
   background-color: #efefef;
 }
-.recent-posts .recent-post-item .time {
+.index-posts .index-post-item .time {
   color: #999;
 }
 .page-nav {
@@ -974,15 +974,15 @@ body {
 .archives .archive a:hover {
   color: #3E8FFF;
 }
-.copyright {
+.post-copyright {
   margin: 15px 30px;
   font-size: 12px;
   text-align: center;
 }
-.copyright a {
+.post-copyright a {
   text-decoration: underline;
 }
-.copyright a:hover {
+.post-copyright a:hover {
   color: #3E8FFF;
 }
 .admire {
@@ -1061,22 +1061,28 @@ body {
             align-items: center;
   }
 }
-.admire .admire-images img {
-  width: 200px;
-  height: 200px;
+.admire .admire-images .image-item {
   padding: 20px;
+}
+.admire .admire-images .image-item img {
+  width: 180px;
+  height: 180px;
+}
+.admire .admire-images .image-item .bottom-tip {
+  font-size: 14px;
+  text-align: center;
 }
 .admire .admire-msg {
   display: none;
   white-space: nowrap;
 }
 .admire:hover {
-  height: 300px;
+  height: 320px;
   width: 500px;
 }
 @media screen and (max-width: 615px) {
   .admire:hover {
-    height: 500px;
+    height: 580px;
     width: 300px;
   }
 }

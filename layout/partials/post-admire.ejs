@@ -2,10 +2,16 @@
 <div class="admire">
   <div class="admire-images">
     <% if (theme.wx_qrcode) { %>
-      <img src="<%=theme.wx_qrcode%>"/>
+      <div class="image-item">
+        <img src="<%=theme.wx_qrcode%>"/>
+        <div class="bottom-tip">微信</div>
+      </div>
     <% } %>
     <% if (theme.ali_qrcode) { %>
-      <img src="<%=theme.ali_qrcode%>"/>
+      <div class="image-item">
+        <img src="<%=theme.ali_qrcode%>"/>
+        <div class="bottom-tip">支付宝</div>
+      </div>
     <% } %>
   </div>
   

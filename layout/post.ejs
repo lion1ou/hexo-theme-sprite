@@ -4,8 +4,14 @@
       <h1 class="title">
         <%=page.title%>
       </h1>
+      <% if (theme.postInfo.showDate && page.date) { %>
+        <time class="time" datetime="<%=date_xml(page.date)%>">
+          <%=date(page.date, 'YYYY-MM-DD HH:mm')%>
+        </time>
+      <% } %>
 
       <% if (theme.postInfo.wordCount) { %>
+        <span class="slash">/</span>
         <span class="read">
           字数 <span class="post-count"><%= wordcount(page.content) %></span>
         </span>
@@ -26,11 +32,6 @@
       <% } %>
      
       <div class="post-meta">
-        <% if (theme.postInfo.showDate && page.date) { %>
-          <time class="time" datetime="<%=date_xml(page.date)%>">
-            <%=date(page.date, 'YYYY/MM/DD HH:mm')%>
-          </time>
-        <% } %>
         <% if (theme.postInfo.showTags && page.tags) { %>
           <span class="post-tags">
             <%- list_tags(page.tags, {
@@ -50,12 +51,43 @@
     <div class="post-end-tip">
       <div>全文完。</div>
     </div>
+
   </article>
   <div class="toc-container">
-    <%- partial('partials/toc') %>
+    <%- partial('partials/post-toc') %>
   </div>
 </div>
-<%- partial('partials/copyright') %>
-<%- partial('partials/admire') %>
-<%- partial('partials/prenext') %>
-<%- partial('partials/disqus') %>
+
+<!-- 文章版权 -->
+<div class="post-copyright">
+  <span>本作品采用</span>
+  <a href="//creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>
+  <span>进行许可。 </span>
+  <div>转载请注明原文链接 <a href="<%= config.url + '/' + page.path %>"><%= config.url + '/' + page.path %></a></div>
+</div>
+
+<!-- 文章翻页器 -->
+<% if (page.prev || page.next) { %>
+  <div class="post-nav">
+    <div class="post-nav-item post-nav-next">
+      <% if (page.next){ %>
+        <span>〈 </span>
+        <a href="<%= url_for(page.next.path) %>" rel="next" title="<%= page.next.title %>">
+        <%= page.next.title %>
+        </a>
+      <% } %>
+    </div>
+
+    <div class="post-nav-item post-nav-prev">
+        <% if (page.prev){ %>
+        <a href="<%= url_for(page.prev.path) %>" rel="prev" title="<%= page.prev.title %>">
+          <%= page.prev.title %>
+        </a>
+        <span>〉</span>
+      <% } %>
+    </div>
+  </div>
+<% } %>
+
+<%- partial('partials/post-admire') %>
+<%- partial('partials/post-disqus') %>

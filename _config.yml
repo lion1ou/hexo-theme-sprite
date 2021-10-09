@@ -12,8 +12,6 @@ menu:
   about: /about
   # rss: /atom.xml
 
-
-
 ###### 自定义文件加载 ######
 
 stylesheets:
@@ -28,6 +26,8 @@ scripts:
 
 # 默认 monokai-sublime, 可选主题详见:https://highlightjs.org/
 hljs_style: 'monokai-sublime' 
+
+http2https: true # http自动跳转https
 
 
 # postItem 文章块
@@ -49,7 +49,15 @@ postInfo:
   update: false
 
 
-# admire 赞赏
+###### 统计 ######
+baidu_analytics: 670319318804add6c99a71df6601f645
+google_analytics: UA-153662927-1
+
+###### disqus评论  ######
+disqus_shortname: lion1ou
+
+
+###### admire 赞赏 ######
 
 admire_msg: 觉得写的不错，请我喝杯奶茶呗~
 ali_qrcode: https://cdn.chuyunt.com/ali_skm_tiny.png

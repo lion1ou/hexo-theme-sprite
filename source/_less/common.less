@@ -116,13 +116,13 @@ body {
   width: 100%;
 }
 
-.recent-posts {
+.index-posts {
   margin: 0 auto;
   @media (max-width: @sm-width) {
     padding: 10px 50px;
   }
   max-width: @index-width;
-  .recent-post-item {
+  .index-post-item {
     margin: 15px auto;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -643,7 +643,7 @@ body {
   }
 }
 
-.copyright {
+.post-copyright {
   margin: 15px 30px;
   font-size: 12px;
   text-align: center;
@@ -698,11 +698,18 @@ body {
       justify-content: center;
       align-items: center;
     }
-    img{
-      width: 200px;
-      height: 200px;
+    .image-item{
       padding: 20px;
+      img{
+        width: 180px;
+        height: 180px;
+      }
+      .bottom-tip{
+        font-size: 14px;
+        text-align: center;
+      }
     }
+    
   }
   .admire-msg {
     display: none;
@@ -710,10 +717,10 @@ body {
   }
   &:hover {
     @media screen and (max-width: 615px) {
-      height: 500px;
+      height: 580px;
       width: 300px;
     }
-    height: 300px;
+    height: 320px;
     width: 500px;
     .admire-icon{
       display: none;
