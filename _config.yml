@@ -1,24 +1,34 @@
 # html lang
 language: zh-Hans
 
-# main menu navigation
+###### menu 导航栏 ######
+
 menu:
   home: /
   archives: /archives
   tags: /tags
-  categories: /categories
+  # categories: /categories
   search: /search
   about: /about
   # rss: /atom.xml
 
-# stylesheets loaded in the <head>
+
+
+###### 自定义文件加载 ######
+
 stylesheets:
-# - /css/main.css
+# - /css/main.css   # css将在head中加载
 
 scripts:
-# - /js/main.js
+# - /js/main.js     # js将在body之后加载
 
-hljs_style: 'monokai-sublime' # 'atom-one-dark'
+
+
+###### 代码高亮主题 ######
+
+# 默认 monokai-sublime, 可选主题详见:https://highlightjs.org/
+hljs_style: 'monokai-sublime' 
+
 
 # postItem 文章块
 index_post:
@@ -38,16 +48,27 @@ postInfo:
   readCount: true # 阅读次数.
   update: false
 
-totalCount: true # 设置站点文章总字数统计为 true.
+
 # admire 赞赏
 
-admireMsg: 觉得写的不错，请我喝杯奶茶呗~
-# aliQRcode: https://i.loli.net/2019/11/15/FpoMI3UCqyKxnb8.jpg
-# wxQRcode: https://i.loli.net/2019/11/15/FpoMI3UCqyKxnb8.jpg
+admire_msg: 觉得写的不错，请我喝杯奶茶呗~
+ali_qrcode: https://cdn.chuyunt.com/ali_skm_tiny.png
+wx_qrcode: https://cdn.chuyunt.com/wx_skm_tiny.png
 
-#footer
-index_page: http://lion1ou.win
-# juejin: http://lion1ou.win
-# zhihu: http://lion1ou.win
-# weibo: http://lion1ou.win
-github: https://github.com/lion1ou
+###### footer ######
+
+# 各平台主页地址
+index: http://blog.lion1ou.tech
+# juejin: http://blog.lion1ou.tech
+# zhihu: http://blog.lion1ou.tech
+# weibo: http://blog.lion1ou.tech
+# github: https://github.com/lion1ou
+
+# 显示全站字数
+site_total_count: true
+# 显示访问量
+show_visitor: true
+# 网站开始时间
+site_start_time: '2016-07-01 00:00:00'
+# 备案号
+bei_an: '浙ICP备2021029843号'

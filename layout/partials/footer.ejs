@@ -1,71 +1,50 @@
 <footer class="footer text-center">
-    <div>
-        <a class="bottom-item" href="<%=theme.index_page%>">首页</a> |
-        <% if (theme.juejin) { %>
-            <a class="bottom-item" href="<%=theme.juejin%>">掘金</a> |
-        <% } %>
-        <% if (theme.zhihu) { %>
-            <a class="bottom-item" href="<%=theme.zhihu%>">知乎</a> |
-        <% } %>
-        <% if (theme.weibo) { %>
-            <a class="bottom-item" href="<%=theme.weibo%>">微博</a> |
-        <% } %>
-        <a class="bottom-item" href="<%=theme.github%>" target="_blank">GitHub</a>
-        
+  <% if(theme.juejin || theme.zhihu || theme.weibo || theme.github) {%> 
+    <div class="bottom-row" style="width: 100%;">
+
+      <a class="bottom-item link" href="<%=theme.index%>">首页</a> | 
+
+      <% if(theme.juejin) { %>
+        <a class="bottom-item link" href="<%=theme.juejin%>" target="_blank">掘金</a> | 
+      <% } %> 
+      
+      <% if(theme.zhihu) { %>
+        <a class="bottom-item link" href="<%=theme.zhihu%>" target="_blank">知乎</a> |
+      <% } %>
+      
+      <% if (theme.weibo) { %>
+        <a class="bottom-item link" href="<%=theme.weibo%>" target="_blank">微博</a> | 
+      <% } %>
+
+      <% if (theme.github) { %>
+        <a class="bottom-item link" href="<%=theme.github%>" target="_blank">GitHub</a>
+      <% } %> 
     </div>
-    <div>
-        <a class="bottom-item" href=""><span id="sitetime"></span></a>
-    </div>
-    <div>
-        <a class="bottom-item" href="">总字数  <span class="post-count"><%= totalcount(site) %></span></a> | 
-        <a class="bottom-item" href="">本站总访问量<span id="busuanzi_value_site_pv"></span>次</a> | 
-        <a class="bottom-item" href="">您是第<span id="busuanzi_value_site_uv"></span>个小伙伴</a> 
-    </div>
-    <div>
-        <a class="bottom-item" href="https://hexo.io" target="_blank">Powered by Hexo</a> |
-        Theme Is 
-				<a class="bottom-item" href="https://github.com/lion1ou/hexo-theme-sprite" target="_blank">Sprite</a>
-				Modified From
-				<a class="bottom-item" href="https://github.com/KevinOfNeu/hexo-theme-xoxo" target="_blank">xoxo</a>
-    </div>
+  <% } %> 
+  <div class="bottom-row">
+    <% if (theme.site_total_count) { %> 
+      <a class="bottom-item">全站总字数 <span class="total_count"><%= totalcount(site) %></span></a>
+    <% } %> 
+    <% if (theme.site_start_time) { %> 
+      <a class="bottom-item">已运行 <span><%= siteTime(theme.site_start_time) %> </span></a>
+    <% } %> 
+    <% if (theme.show_visitor) { %> 
+    <a class="bottom-item">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</a>
+    <a class="bottom-item">您是第 <span id="busuanzi_value_site_uv"></span> 个小伙伴</a>
+    <% } %> 
+  </div>
+
+  <div class="bottom-row">
+    <a class="bottom-item link" href="https://hexo.io" target="_blank">Powered By Hexo</a>
+    <a class="bottom-item link" href="https://github.com/lion1ou/hexo-theme-sprite" target="_blank">Theme By Sprite</a>
+
+    <% if(config.author && config.url && theme.site_start_time) {%> 
+      <a class="bottom-item link" href="<%= config.url %> ">© <%=new Date(theme.site_start_time).getFullYear()  %>-<%= new Date().getFullYear() %>  <%= config.author %>  版权所有</a>
+    <% } %> 
+
+    <% if(theme.bei_an) {%> 
+      <a class="bottom-item link" href="https://beian.miit.gov.cn" target="_blank"><%= theme.bei_an %> </a>
+    <% } %> 
+  </div>
 </footer>
 
-
-<script language=javascript>
-	function siteTime(){
-    
-		window.setTimeout("siteTime()", 1000);
-		var seconds = 1000;
-		var minutes = seconds * 60;
-		var hours = minutes * 60;
-		var days = hours * 24;
-		var years = days * 365;
-		var today = new Date();
-		var todayYear = today.getFullYear();
-		var todayMonth = today.getMonth()+1;
-		var todayDate = today.getDate();
-		var todayHour = today.getHours();
-		var todayMinute = today.getMinutes();
-		var todaySecond = today.getSeconds();
-		/* 
-		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-		year - 作为date对象的年份，为4位年份值
-		month - 0-11之间的整数，做为date对象的月份
-		day - 1-31之间的整数，做为date对象的天数
-		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-		minutes - 0-59之间的整数，做为date对象的分钟数
-		seconds - 0-59之间的整数，做为date对象的秒数
-		microseconds - 0-999之间的整数，做为date对象的毫秒数
-        */
-		var t1 = Date.UTC(2016,07,01,00,00,00); //北京时间2017-2-23 00:00:00
-		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
-		var diff = t2-t1;
-		var diffYears = Math.floor(diff/years);
-		var diffDays = Math.floor((diff/days)-diffYears*365);
-		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
-		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
-		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-		document.getElementById("sitetime").innerHTML=" 已运行 "+ diffYears + " 年 "+ diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
-	}
-	siteTime();
-</script>

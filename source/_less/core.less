@@ -114,13 +114,22 @@ footer {
   margin-top: 2rem!important;
   color: @gray-light;
   font-size: 12px;
-  position: relative;
-  z-index: 1024;
-  .bottom-item {
-    margin-left: 5px;
-    margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .bottom-item:hover {
+  .bottom-item {
+    margin: 0px 10px;
+  }
+  .link:hover {
     color: @light-blue;
   }
 }

@@ -5,14 +5,7 @@
         <%=page.title%>
       </h1>
 
-      <% if (theme.postInfo.showDate && page.date) { %>
-      <time class="time" datetime="<%=date_xml(page.date)%>">
-        <%=date(page.date)%>
-      </time>
-      <% } %>
-
       <% if (theme.postInfo.wordCount) { %>
-        <span class="slash">/</span>
         <span class="read">
           字数 <span class="post-count"><%= wordcount(page.content) %></span>
         </span>
@@ -31,18 +24,23 @@
           阅读 <span id="busuanzi_value_page_pv"></span>
         </span>
       <% } %>
-      
-      <% if (theme.postInfo.showTags && page.tags) { %>
-        <span class="post-meta">
+     
+      <div class="post-meta">
+        <% if (theme.postInfo.showDate && page.date) { %>
+          <time class="time" datetime="<%=date_xml(page.date)%>">
+            <%=date(page.date, 'YYYY/MM/DD HH:mm')%>
+          </time>
+        <% } %>
+        <% if (theme.postInfo.showTags && page.tags) { %>
           <span class="post-tags">
             <%- list_tags(page.tags, {
               show_count: false,
               class: 'article-tag'
             }) %>
           </span>
-        </span>
-      <% } %>
-
+        <% } %>
+      </div>
+     
     </header>
 
     <div class="post-content">
@@ -58,6 +56,6 @@
   </div>
 </div>
 <%- partial('partials/copyright') %>
-<%- partial('partials/share') %>
+<%- partial('partials/admire') %>
 <%- partial('partials/prenext') %>
 <%- partial('partials/disqus') %>
