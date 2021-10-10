@@ -4,12 +4,6 @@ Hexo theme inspired by [xoxo](https://github.com/KevinOfNeu/hexo-theme-xoxo)
 
 [Demo](https://blog.lion1ou.tech)
 
-Snapshots: 
-
-![blog-index.png](https://i.loli.net/2021/10/10/RXdxFbnLtMumAB6.png)
-![blog-archives.png](https://i.loli.net/2021/10/10/jmnH71aerS8UFR9.png)
-![blog-tags.png](https://i.loli.net/2021/10/10/8Zu1b39gVh7jymB.png)
-
 ## 特点
 
 - 简单
@@ -17,9 +11,27 @@ Snapshots:
 
 
 ## 使用
+
+###  hexo _config.yml
+
+```js
+
+git clone git@github.com:lion1ou/hexo-theme-sprite.git themes/hexo-theme-sprite
+
+```
+
+修改hexo目录下的 _config.yml 的theme
+
+```yml
+# ...
+theme: hexo-theme-sprite
+# ...
+```
+
+
 除了基础 Hexo 配置外,你还需要这样...
 
-### _config.yml
+### theme _config.yml
 ```yml
 
 # html lang
@@ -115,3 +127,8 @@ bei_an: '浙ICP备2021029843号'
 * 添加黑夜模式
 * 添加评论系统
 
+## Snapshots
+
+![blog-index.png](https://i.loli.net/2021/10/10/RXdxFbnLtMumAB6.png)
+![blog-archives.png](https://i.loli.net/2021/10/10/jmnH71aerS8UFR9.png)
+![blog-tags.png](https://i.loli.net/2021/10/10/8Zu1b39gVh7jymB.png)
