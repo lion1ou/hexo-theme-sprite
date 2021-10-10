@@ -548,8 +548,8 @@ body {
   width: 100%;
 }
 .post blockquote {
-  padding: 1rem;
-  margin: 1rem 0;
+  padding: 0.5rem;
+  margin: 0.5rem 0 0.5rem 1rem;
   padding-left: 20px;
   border: 1px solid #eee;
   border-left: 4px solid #ccc;
@@ -575,6 +575,12 @@ body {
 .post .post-content h6 {
   padding-top: 70px;
   margin-top: -56px;
+}
+.post .post-content ol,
+.post .post-content ul,
+.post .post-content dd,
+.post .post-content dl {
+  padding-left: 1rem;
 }
 .post .post-content table {
   width: 100%;
@@ -612,6 +618,11 @@ body {
 .post .post-content table th:last-child,
 .post .post-content table td:last-child {
   margin-bottom: 0;
+}
+.post .post-content pre {
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  overflow: auto;
 }
 .post .post-content .note {
   position: relative;
