@@ -1,13 +1,5 @@
-html,
-body {
-  font-size: 16px;
-  font-weight: 300;
-}
-body {
-  color: @m-black;
-  line-height: 1.8rem;
-  margin: 0;
-  background: @white;
+.text-center{
+  text-align: center;
 }
 
 .nav-container {
@@ -24,7 +16,7 @@ body {
     border-bottom-width: 0.5px;
     height: @nav-height;
     padding: @nav-padding;
-    background: #fefefe;
+    background: @white;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
@@ -109,7 +101,10 @@ body {
   padding-top: @padding-top;
   margin: 0 auto;
   max-width: 1000px;
-  min-height: calc(~'100vh - 270px');
+  min-height: calc(~'100vh - 150px');
+  @media screen and (max-width: @sm-width) {
+    min-height: calc(~'100vh - 100px');
+  }
   @media screen and (min-width: @xl-width) {
     max-width: 880px;
   }
@@ -224,7 +219,7 @@ body {
     line-height: 28px;
     &.current {
       color: @white;
-      background: #ccc;
+      background: @gray-light;
       border-radius: 14px;
       &:hover {
         color: @white;
@@ -265,7 +260,7 @@ body {
         overflow-y: auto;
         overflow-x: auto;
         border-radius: 4px;
-        background-color: #f6f6f6;
+        background-color: @bg-gray;
       }
       @media screen and (max-width: 1260px) {
         display: none !important;
@@ -435,7 +430,7 @@ body {
   }
   .post-end-tip {
     padding-top: 30px;
-    color: #333;
+    color: @black;
     font-weight: bold;
   }
 }
@@ -626,7 +621,7 @@ body {
       font-weight: normal;
     }
     .date {
-      color: #999;
+      color: @gray-light;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
       font-size: 1rem;
@@ -665,7 +660,7 @@ body {
   position: fixed;
   left: 5px;
   bottom: 20%;
-  background: #ffffff;
+  background: @white;
   border-radius: 5px;
   box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -730,6 +725,40 @@ body {
     }
     .admire-msg {
       display: block;
+    }
+  }
+}
+
+
+footer {
+  width: 60%;
+  max-width: 840px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @white;
+  border-top: 0.5px solid #eee;
+  padding-bottom: 1rem!important;
+  padding-top: 1rem!important;
+  margin-top: 2rem!important;
+  color: @gray-light;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .bottom-item {
+    margin: 0px 10px;
+    @media screen and (max-width: @sm-width) {
+      display: none;
     }
   }
 }

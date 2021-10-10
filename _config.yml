@@ -21,41 +21,41 @@ scripts:
 # - /js/main.js     # js将在body之后加载
 
 
+###### 文章相关 ######
+
+# postItem 首页文章块
+index_post:
+  show_excerpt: true # 显示摘要 0
+  show_tags: true # 显示tags
+  show_date: true # 显示时间
+  word_count: true # 设置文章字数统计为 true.
+  min2read: false # 阅读时长.
+
+# 文章详情
+post_info:
+  show_date: true
+  show_tags: true
+  word_count: true # 设置文章字数统计为 true.
+  min2read: true # 阅读时长.
+  read_count: true # 阅读次数.
+
+
+###### 统计 ######
+baidu_analytics: 670319318804add6c99a71df6601f645
+google_analytics: UA-153662927-1
+cnzz_analytics: 1280415470
+
+###### disqus评论  ######
+disqus_shortname: lion1ou
 
 ###### 代码高亮主题 ######
 
 # 默认 monokai-sublime, 可选主题详见:https://highlightjs.org/
 hljs_style: 'monokai-sublime' 
 
+###### 自动跳转https ######
+
 http2https: true # http自动跳转https
-
-
-# postItem 文章块
-index_post:
-  show_excerpt: true # 显示摘要 0
-  # maxRows: 2 # 摘要最大展示行数
-  show_tags: true # 显示tags
-  show_date: true # 显示时间
-  word_count: true # 设置文章字数统计为 true.
-  min2read: true # 阅读时长.
-
-# 文章详情
-postInfo:
-  showDate: true
-  showTags: true
-  wordCount: true # 设置文章字数统计为 true.
-  min2read: true # 阅读时长.
-  readCount: true # 阅读次数.
-  update: false
-
-
-###### 统计 ######
-baidu_analytics: 670319318804add6c99a71df6601f645
-google_analytics: UA-153662927-1
-
-###### disqus评论  ######
-disqus_shortname: lion1ou
-
 
 ###### admire 赞赏 ######
 
@@ -73,10 +73,10 @@ index: http://blog.lion1ou.tech
 # github: https://github.com/lion1ou
 
 # 显示全站字数
-site_total_count: true
+site_total_count: false
 # 显示访问量
-show_visitor: true
-# 网站开始时间
+show_visitor: false
+# 网站开始时间， 会展示已运行多少天
 site_start_time: '2016-07-01 00:00:00'
 # 备案号
 bei_an: '浙ICP备2021029843号'

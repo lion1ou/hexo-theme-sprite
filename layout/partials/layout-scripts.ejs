@@ -9,7 +9,7 @@
 <script src="/js/main.js"></script>
 
 <!-- 不蒜子 http://ibruce.info/2015/04/04/busuanzi/ -->
-<script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- 代码高亮 https://highlightjs.org/-->
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
 <script> window.hljs.initHighlightingOnLoad() </script>
@@ -38,6 +38,14 @@
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', '<%= theme.google_analytics %>', 'auto');
         ga('send', 'pageview');
+  </script>
+<% } %>
+
+<!-- 友盟分析 -->
+<% if (theme.cnzz_analytics){ %>
+  <script type="text/javascript">
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_<%= theme.cnzz_analytics %>'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D<%= theme.cnzz_analytics %>%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    document.getElementById('cnzz_stat_icon_<%= theme.cnzz_analytics %>').style.display = 'none'
   </script>
 <% } %>
 

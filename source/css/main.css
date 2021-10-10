@@ -1,6 +1,3 @@
-.text-center {
-  text-align: center !important;
-}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -72,77 +69,13 @@ a:active {
   outline: none;
   text-decoration: none;
 }
-.pr {
-  position: absolute !important;
-  right: 0;
-}
-.float-r {
-  float: right;
+a:hover {
+  color: #3E8FFF;
 }
 em {
   color: #FF5722;
   font-weight: bold;
   font-style: normal;
-}
-footer {
-  width: 60%;
-  max-width: 840px;
-  min-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  border-top: 0.5px solid #eee;
-  padding-bottom: 1rem!important;
-  padding-top: 1rem!important;
-  margin-top: 2rem!important;
-  color: #999;
-  font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-footer .bottom-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-footer .bottom-item {
-  margin: 0px 10px;
-}
-footer .link:hover {
-  color: #3E8FFF;
-}
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
 }
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
@@ -174,43 +107,6 @@ footer .link:hover {
   background: #3E8FFF;
   color: #fff;
 }
-.tag-button {
-  font-size: 14px;
-  line-height: 20px;
-  display: inline-block;
-  height: 20px;
-  margin: 3px;
-  padding: 0 10px;
-  color: #555;
-  border-radius: 3px;
-  background: #f6f6f6;
-  min-width: 30px;
-  text-align: center;
-}
-.tag-button a {
-  color: #555;
-}
-.tag-button:hover {
-  color: #555;
-  background: #efefef;
-}
-.post-page {
-  background-color: #fff;
-  max-width: 880px;
-  width: 100%;
-  padding: 10px;
-  position: relative;
-}
-@media screen and (min-width: 576px) {
-  .post-page {
-    padding: 10px 50px;
-  }
-}
-@media (max-width: 576px) {
-  .post-page {
-    padding: 10px 20px;
-  }
-}
 html,
 body {
   font-size: 16px;
@@ -221,6 +117,9 @@ body {
   line-height: 1.8rem;
   margin: 0;
   background: #fff;
+}
+.text-center {
+  text-align: center;
 }
 .nav-container {
   display: -webkit-box;
@@ -241,7 +140,7 @@ body {
   border-bottom-width: 0.5px;
   height: 50px;
   padding: 5px 20px;
-  background: #fefefe;
+  background: #fff;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -353,8 +252,13 @@ body {
   padding-top: 60px;
   margin: 0 auto;
   max-width: 1000px;
-  min-height: calc(100vh - 270px);
+  min-height: calc(100vh - 150px);
   width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .container {
+    min-height: calc(100vh - 100px);
+  }
 }
 @media screen and (min-width: 1280px) {
   .container {
@@ -492,7 +396,7 @@ body {
 }
 .page-nav .page-number.current {
   color: #fff;
-  background: #ccc;
+  background: #999;
   border-radius: 14px;
 }
 .page-nav .page-number.current:hover {
@@ -991,7 +895,7 @@ body {
   position: fixed;
   left: 5px;
   bottom: 20%;
-  background: #ffffff;
+  background: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
@@ -1096,4 +1000,95 @@ body {
 }
 .admire:hover .admire-msg {
   display: block;
+}
+footer {
+  width: 60%;
+  max-width: 840px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-top: 0.5px solid #eee;
+  padding-bottom: 1rem!important;
+  padding-top: 1rem!important;
+  margin-top: 2rem!important;
+  color: #999;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+footer .bottom-item {
+  margin: 0px 10px;
+}
+@media screen and (max-width: 576px) {
+  footer .bottom-item {
+    display: none;
+  }
+}
+.tag-button {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  margin: 3px;
+  padding: 0 10px;
+  color: #555;
+  border-radius: 3px;
+  background: #f6f6f6;
+  min-width: 30px;
+  text-align: center;
+}
+.tag-button a {
+  color: #555;
+}
+.tag-button:hover {
+  color: #555;
+  background: #efefef;
+}
+.post-page {
+  background-color: #fff;
+  max-width: 880px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+@media screen and (min-width: 576px) {
+  .post-page {
+    padding: 10px 50px;
+  }
+}
+@media (max-width: 576px) {
+  .post-page {
+    padding: 10px 20px;
+  }
 }

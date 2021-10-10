@@ -4,27 +4,29 @@
       <h1 class="title">
         <%=page.title%>
       </h1>
-      <% if (theme.postInfo.showDate && page.date) { %>
-        <time class="time" datetime="<%=date_xml(page.date)%>">
-          <%=date(page.date, 'YYYY-MM-DD HH:mm')%>
-        </time>
-      <% } %>
 
-      <% if (theme.postInfo.wordCount) { %>
-        <span class="slash">/</span>
+      <% if (theme.post_info.show_date && page.date) { %>
+        <div class="post-meta">
+          <time class="time" datetime="<%=date_xml(page.date)%>">
+            <%=date(page.date, 'YYYY-MM-DD HH:mm')%>
+          </time>
+        </div>
+      <% } %>
+      
+      <% if (theme.post_info.word_count) { %>
         <span class="read">
           字数 <span class="post-count"><%= wordcount(page.content) %></span>
         </span>
       <% } %>
 
-      <% if (theme.postInfo.min2read) { %>
+      <% if (theme.post_info.min2read) { %>
         <span class="slash">/</span>
         <span class="read">
           <span class="post-count"><%= min2read(page.content) %> min</span> 读完
         </span>
       <% } %>
 
-      <% if (theme.postInfo.readCount) { %>
+      <% if (theme.post_info.read_count) { %>
         <span class="slash">/</span>
         <span class="read">
           阅读 <span id="busuanzi_value_page_pv"></span>
@@ -32,7 +34,7 @@
       <% } %>
      
       <div class="post-meta">
-        <% if (theme.postInfo.showTags && page.tags) { %>
+        <% if (theme.post_info.show_tags && page.tags) { %>
           <span class="post-tags">
             <%- list_tags(page.tags, {
               show_count: false,
