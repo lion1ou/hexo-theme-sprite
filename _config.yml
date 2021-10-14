@@ -42,7 +42,8 @@ post_info:
 
 ###### 统计 ######
 baidu_analytics: 670319318804add6c99a71df6601f645
-google_analytics: UA-153662927-1
+# google_analytics: UA-153662927-1
+google_analytics: G-2Z1CFBMZXR
 cnzz_analytics: 1280415470
 
 ###### disqus评论  ######
@@ -66,10 +67,10 @@ wx_qrcode: https://cdn.chuyunt.com/wx_skm_tiny.png
 ###### footer ######
 
 # 各平台主页地址
-index: http://blog.lion1ou.tech
-# juejin: http://blog.lion1ou.tech
-# zhihu: http://blog.lion1ou.tech
-# weibo: http://blog.lion1ou.tech
+index: http://lion1ou.tech
+# juejin: http://lion1ou.tech
+# zhihu: http://lion1ou.tech
+# weibo: http://lion1ou.tech
 # github: https://github.com/lion1ou
 
 # 显示全站字数

@@ -2,7 +2,7 @@
 
 Hexo theme inspired by [xoxo](https://github.com/KevinOfNeu/hexo-theme-xoxo) 
 
-[Demo](https://blog.lion1ou.tech)
+[Demo](https://lion1ou.tech)
 
 ## 特点
 
@@ -103,10 +103,10 @@ wx_qrcode: https://cdn.chuyunt.com/wx_skm_tiny.png
 ###### footer ######
 
 # 各平台主页地址
-index: http://blog.lion1ou.tech
-# juejin: http://blog.lion1ou.tech
-# zhihu: http://blog.lion1ou.tech
-# weibo: http://blog.lion1ou.tech
+index: http://lion1ou.tech
+# juejin: http://lion1ou.tech
+# zhihu: http://lion1ou.tech
+# weibo: http://lion1ou.tech
 # github: https://github.com/lion1ou
 
 # 显示全站字数
