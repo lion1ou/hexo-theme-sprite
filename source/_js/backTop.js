@@ -35,6 +35,7 @@
       ".heart{z-index:9999;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
     );
     attachEvent();
+    addImgEvent();
     gameloop();
     addMenuEvent();
   }
@@ -82,6 +83,10 @@
         createHeart(event);
       };
     }
+    window.onclick = function (event) {
+      old && old();
+      createHeart(event);
+    };
   }
 
   function createHeart(event) {
@@ -110,8 +115,16 @@
   }
 
   function randomColor() {
-    // return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
-    return '#F44336';
+    return (
+      'rgb(' +
+      ~~(Math.random() * 255) +
+      ',' +
+      ~~(Math.random() * 255) +
+      ',' +
+      ~~(Math.random() * 255) +
+      ')'
+    );
+    // return '#F44336';
   }
 
   function addMenuEvent() {
@@ -132,5 +145,66 @@
         menu.style.display = 'none';
       }
     }
+  }
+
+  function addImgEvent() {
+    const imgs = document.querySelectorAll('.post-content img');
+    for (let i = 0; i < imgs.length; i++) {
+      const element = imgs[i];
+      element.onclick = function () {
+        addBigImgDom(element.src);
+      };
+    }
+  }
+
+  function rmBigImgDom() {
+    const imgContainer = document.getElementsByClassName('big-img-container');
+    if (imgContainer.length) {
+      imgContainer[0].remove();
+    }
+  }
+
+  function addBigImgDom(imgUrl) {
+    document.body.style.overflow = 'hidden';
+    rmBigImgDom();
+    // body上添加大图dom
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'big-img-container';
+    const img = document.createElement('img');
+    img.className = 'big-img-content';
+    img.src = imgUrl;
+    img.onload = function () {
+      // 比较图片是否超出
+      var w =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+
+      var h =
+        window.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight;
+
+      if (img.offsetHeight > h) {
+        img.style.height = h + 'px';
+        img.style.width = 'auto';
+      }
+
+      if (img.offsetWidth > w) {
+        img.style.width = w + 'px';
+        img.style.height = 'auto';
+      }
+    };
+    // 移除DOM
+    img.onclick = function () {
+      rmBigImgDom();
+      document.body.style.overflow = '';
+    };
+    imgContainer.onclick = function () {
+      rmBigImgDom();
+      document.body.style.overflow = '';
+    };
+    imgContainer.appendChild(img);
+    document.body.appendChild(imgContainer);
   }
 })(window, document);
