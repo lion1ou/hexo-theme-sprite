@@ -70,10 +70,10 @@ a:active {
   text-decoration: none;
 }
 a:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 em {
-  color: #FF5722;
+  color: #ff5722;
   font-weight: bold;
   font-style: normal;
 }
@@ -100,11 +100,11 @@ em {
   box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 ::-moz-selection {
-  background: #3E8FFF;
+  background: #3e8fff;
   color: #fff;
 }
 ::selection {
-  background: #3E8FFF;
+  background: #3e8fff;
   color: #fff;
 }
 html,
@@ -241,7 +241,7 @@ body {
   background-color: #fff;
 }
 .nav-container .home-menu .menu-list .menu-item.actived {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .slash {
   color: #999;
@@ -249,7 +249,7 @@ body {
   padding-right: 5px;
 }
 .container {
-  padding-top: 60px;
+  padding-top: 55px;
   margin: 0 auto;
   max-width: 1000px;
   min-height: calc(100vh - 150px);
@@ -271,14 +271,20 @@ body {
 }
 @media (max-width: 576px) {
   .index-posts {
-    padding: 10px 50px;
+    padding: 0px 30px;
   }
 }
 .index-posts .index-post-item {
-  margin: 15px auto;
+  margin: 0px auto 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-top: none;
+}
+@media screen and (max-width: 576px) {
+  .index-posts .index-post-item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 .index-posts .index-post-item .post-excerpt {
   color: #999;
@@ -292,8 +298,9 @@ body {
 .index-posts .index-post-item .post-meta {
   font-size: 12px;
   position: relative;
-  min-height: 30px;
   color: #999;
+  height: 20px;
+  line-height: 20px;
 }
 @media screen and (max-width: 576px) {
   .index-posts .index-post-item .post-meta {
@@ -304,6 +311,7 @@ body {
   font-size: 12px;
 }
 .index-posts .index-post-item .title h2 {
+  margin: 0;
   font-size: 1.2rem;
   font-weight: normal;
 }
@@ -313,10 +321,33 @@ body {
   }
 }
 .index-posts .index-post-item .title:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .index-posts .index-post-item .title-group {
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (max-width: 576px) {
+  .index-posts .index-post-item .title-group {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.index-posts .index-post-item .title-group .tags {
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,15 +357,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.index-posts .index-post-item .title-group .tags {
-  margin-left: 6px;
-  font-size: 12px;
-}
-@media screen and (max-width: 576px) {
-  .index-posts .index-post-item .title-group .tags {
-    display: none;
-  }
 }
 .index-posts .index-post-item .post-info {
   width: 100%;
@@ -360,11 +382,22 @@ body {
   }
 }
 .index-posts .index-post-item .more:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .index-posts .index-post-item .index-tag-list {
-  display: inline;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .index-posts .index-post-item .index-tag-list .index-tag-list-item {
   margin-right: 5px;
@@ -403,12 +436,12 @@ body {
   color: #fff;
 }
 .page-nav .page-number:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
   border-radius: 14px;
   border: 1px dashed #efefef;
 }
 .page-nav a:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .post-container {
   display: -webkit-box;
@@ -429,7 +462,7 @@ body {
   display: none;
 }
 .post-container .toc-container .toc-article a:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 @media screen and (min-width: 1260px) {
   .post-container .toc-container .toc-article {
@@ -650,7 +683,7 @@ body {
   border-left-color: #d9534f;
 }
 .post .post-content a {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .post .post-end-tip {
   padding-top: 30px;
@@ -735,7 +768,7 @@ body {
   }
 }
 .tag-page .tag-item a:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .post-nav {
   background-color: #fff;
@@ -758,7 +791,7 @@ body {
   width: 49.5%;
 }
 .post-nav .post-nav-item:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .post-nav .post-nav-item span {
   display: inline-block;
@@ -794,11 +827,11 @@ body {
   color: #202020 !important;
 }
 .category-list .category-list-link:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .category-list .category-list-count {
   padding-left: 1rem;
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .disqus-comments {
   background-color: #fff;
@@ -816,7 +849,7 @@ body {
   border-radius: 2px !important;
 }
 .search-content .pure-input:focus {
-  border-color: #3E8FFF !important;
+  border-color: #3e8fff !important;
 }
 .search-content .search-result {
   color: #999;
@@ -830,10 +863,10 @@ body {
   font-size: 1.2rem;
 }
 .search-result-list a.search-result-title:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .search-result-list .search-keyword {
-  color: #FF5722;
+  color: #ff5722;
   font-weight: bold;
 }
 .archives .archive-year-wrap {
@@ -858,7 +891,7 @@ body {
   z-index: 1;
   display: block;
   content: '';
-  background-color: #3E8FFF;
+  background-color: #3e8fff;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -887,7 +920,7 @@ body {
   text-align: center;
 }
 .archives .archive a:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .post-copyright {
   margin: 15px 30px;
@@ -898,7 +931,7 @@ body {
   text-decoration: underline;
 }
 .post-copyright a:hover {
-  color: #3E8FFF;
+  color: #3e8fff;
 }
 .admire {
   width: 50px;
@@ -1020,9 +1053,9 @@ footer {
   margin-right: auto;
   background-color: #fff;
   border-top: 0.5px solid #eee;
-  padding-bottom: 1rem!important;
-  padding-top: 1rem!important;
-  margin-top: 2rem!important;
+  padding-bottom: 1rem !important;
+  padding-top: 1rem !important;
+  margin-top: 2rem !important;
   color: #999;
   font-size: 12px;
   display: -webkit-box;
