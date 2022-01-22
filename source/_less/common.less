@@ -129,6 +129,11 @@
     .post-excerpt {
       color: @gray-light;
       font-size: 14px;
+      code {
+        background: inherit;
+        margin: 0;
+        padding: 0;
+      }
       @media screen and (max-width: @sm-width) {
         display: none;
       }
@@ -205,6 +210,7 @@
       align-items: center;
       align-content: center;
       .index-tag-list-item {
+        flex: 1 0 auto;
         margin-right: 5px;
         color: @gray-light;
         padding: 2px 5px;
@@ -351,14 +357,17 @@
   }
   // markdown 内的 >
   blockquote {
-    padding: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.2rem 0.5rem 0.2rem 0.1rem;
     margin: 0.5rem 0;
-    padding-left: 20px;
+    padding-left: 10px;
     border: 1px solid #eee;
     border-left: 4px solid #ccc;
     color: @gray;
+    background: rgba(0, 0, 0, 0.03);
     p {
       margin: 0;
+      word-break: break-all;
     }
   }
   table {
@@ -436,6 +445,7 @@
       border-left-width: 5px;
       p {
         margin: 0;
+        word-break: break-all;
       }
       &.primary {
         border-left-color: #6f42c1;
