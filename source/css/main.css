@@ -109,12 +109,14 @@ em {
 }
 html,
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
+  font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 }
 body {
   color: #202020;
   line-height: 1.8rem;
+  letter-spacing: 1.5px;
   margin: 0;
   background: #fff;
 }
